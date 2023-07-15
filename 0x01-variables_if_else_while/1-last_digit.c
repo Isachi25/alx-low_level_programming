@@ -2,8 +2,8 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main - 'get the last digit of a number'
- * Return: Always 0
+ * main - Get the last digit of a number.
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
