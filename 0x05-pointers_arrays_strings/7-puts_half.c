@@ -1,18 +1,23 @@
 #include "main.h"
 /**
- * _strlen - returns the length of a string
- * @s: string
- * Return: length
+ * puts_half - prints half of a string
+ * @str: input
  */
-int _strlen(char *s)
+void puts_half(char *str)
 {
-	int longi = 0;
+	int len = 0;
 
-	while (*s != '\0')
+	while (*str != '\0')
 	{
-		longi++;
-		s++;
+		len++;
+		str++;
 	}
-	return (longi);
-}
 
+	str -= (len / 2);
+	while (*str != '\0')
+	{
+		putchar(*str);
+		str++;
+	}
+	putchar('\n');
+}
