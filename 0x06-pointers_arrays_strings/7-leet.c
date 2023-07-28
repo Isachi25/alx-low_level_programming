@@ -2,7 +2,7 @@
 /**
  * leet - A function that encodes a string 1337
  * @n: input value
- * Return value: n value
+ * Return: n value
  */
 char *leet(char *n)
 {
