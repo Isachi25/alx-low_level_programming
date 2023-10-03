@@ -3,7 +3,7 @@
 /**
  * append_text_to_file - Appends text at the end of a file
  * @filename: A pointer to the name of the file
- * @text_context: The string to add to the end of
+ * @text_content: The string to add to the end of
  * the file
  *
  * Return: 1(Success) and -1 (Failure)
@@ -11,24 +11,29 @@
 
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int o, w, len = 0;
+	int file_d;
+	int nletters;
+	int rwr;
 
-	if (filename == NULL)
+	if (!filename)
 		return (-1);
 
-	if (text_content != NULL)
+	file_d = open(filename, O_WRONLY | O_APPEND);
+
+	if (file_d == -1)
+		return (-1);
+
+	if (text_content)
 	{
-		for (len = 0; text_content[len];)
-			len++;
+		for (nletters = 0; text_content[nletters]; nletters++)
+			;
+		rwr = write(file_d, text_content, nletters);
+
+		if (rwr == -1)
+			return (-1);
 	}
 
-	o = open(filename, O_WRONLY | O_APPEND);
-	w = write(o, text_content, len);
-
-	if (o == -1 || w == -1)
-		return (-1);
-
-	close(o);
+	close(file_d);
 
 	return (1);
 }
