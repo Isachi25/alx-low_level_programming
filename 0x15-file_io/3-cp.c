@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * error_file - checks if files can be opened.
+ * error_file - checks for opening of the files.
  * @file_from: file_from.
  * @file_to: file_to.
  * @argv: arguments vector.
@@ -23,7 +23,7 @@ void error_file(int file_from, int file_to, char *argv[])
 }
 
 /**
- * main - check the code for Holberton School students.
+ * main - check the code for students in HB.
  * @argc: number of arguments.
  * @argv: arguments vector.
  * Return: Always 0.
