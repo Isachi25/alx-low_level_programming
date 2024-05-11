@@ -13,3 +13,5 @@
 105-jump_list
 105-main.c
 listint/*.c
+106-linear_skip
+106-main.c
