@@ -10,3 +10,6 @@
 103-exponential
 104-main.c
 104-advanced_binary
+105-jump_list
+105-main.c
+listint/*.c
